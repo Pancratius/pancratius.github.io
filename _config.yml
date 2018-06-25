@@ -1,6 +1,6 @@
 # Site settings
-title: C了个J Blog
-SEOTitle: C了个J的博客 | C了个J
+title: Pancratius Blog
+SEOTitle: Pancras的博客 | C了个J
 header-img: img/post-bg-desk.jpg
 email: coder.zpf@gmail.com
 description: "Every failure is leading towards success."
@@ -20,7 +20,7 @@ sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's us
 RSS: false
 # weibo_username:     qiubaiying
 #zhihu_username:     qiubaiying
-github_username:    CaptainSirZero
+github_username:    Pancratius
 #facebook_username:  baiying.qiu.7
 #jianshu_username:   e71990ada2fd
 #twitter_username:   qiubaiying
