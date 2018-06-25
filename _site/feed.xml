@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pancratius Blog</title>
+    <description>Every failure is leading towards success.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 25 Jun 2018 11:49:11 +0800</pubDate>
+    <lastBuildDate>Mon, 25 Jun 2018 11:49:11 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>如何使用多个GitHub账户</title>
+        <description>&lt;p&gt;参考文件（带视频指导）：&lt;a href=&quot;https://code.tutsplus.com/tutorials/quick-tip-how-to-work-with-github-and-multiple-accounts--net-22574&quot;&gt;How to Work with GitHub and Multiple Accounts&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;第1步-创建一个新的ssh密钥&quot;&gt;第1步 创建一个新的SSH密钥&lt;/h4&gt;
+
+&lt;p&gt;首先为第二个GitHub账号生成唯一的SSH密钥。假如该GitHub账号名称是&lt;code class=&quot;highlighter-rouge&quot;&gt;Pancratius&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh-keygen -t rsa -C &quot;your-email-address&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;需要注意的是：不要覆盖之前账户的密钥。回车以后，当出现文件路径时，输入一个新的文件名称 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.ssh/id_rsa_xxx&lt;/code&gt;，然后直接连续回车，就可以了，这个时候会看到&lt;em&gt;~/.ssh&lt;/em&gt;路径下回出现&lt;code class=&quot;highlighter-rouge&quot;&gt;id_rsa_xxx和id_rsa_xxx.pub&lt;/code&gt;两个文件，这两个文件对应的就是我们第二个账号生成的私钥和公钥了。&lt;/p&gt;
+
+&lt;h4 id=&quot;第2步-添加新的密钥&quot;&gt;第2步 添加新的密钥&lt;/h4&gt;
+
+&lt;p&gt;将新生成的公钥填加到GitHub账户的SSH下。&lt;/p&gt;
+
+&lt;p&gt;将新的密钥名称添加到ssh中心，在终端中输入：&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh-add ~/.ssh/id_rsa_xxx&lt;/code&gt;，如果成功，会看到“身份已添加”的回复信息。&lt;/p&gt;
+
+&lt;h4 id=&quot;第3步-创建一个配置文件&quot;&gt;第3步 创建一个配置文件&lt;/h4&gt;
+
+&lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;~/.ssh&lt;/code&gt;路径下创建一个config文件，该文件的目的是兼容多个GitHub账号，以此区分推送项目时推到不同账号。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# default GitHub account
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+# GitHub account xxx
+Host github-xxx  #自定义一个域名，作为第二个账号的GitHub地址
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_xxx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;第4步-运行测试&quot;&gt;第4步 运行测试&lt;/h4&gt;
+
+&lt;p&gt;将你要上传的项目下，&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;first commit&quot;&lt;/code&gt;添加Git管理文件和仓库&lt;/p&gt;
+
+&lt;p&gt;在GitHub账户下新建一个repository，例如&lt;code class=&quot;highlighter-rouge&quot;&gt;test_new_github_account&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;在本地项目下，将本地项目添加到远程仓库中，&lt;code class=&quot;highlighter-rouge&quot;&gt;git remote add origin git@github-xxx:Pancratius/test_new_github_account.git&lt;/code&gt;，可以看到这里我们没有使用&lt;code class=&quot;highlighter-rouge&quot;&gt;git@github.com&lt;/code&gt;而是使用的&lt;code class=&quot;highlighter-rouge&quot;&gt;git@github-xxx&lt;/code&gt;我们再config文件中指定的Host，意思就是将本地代码添加到&lt;code class=&quot;highlighter-rouge&quot;&gt;github-xxx&lt;/code&gt;对应的账户下&lt;/p&gt;
+
+&lt;p&gt;运行&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin master&lt;/code&gt;这个时候，等待完成，就可以看到项目已经存在你的GitHub账户下了。&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 22 Jun 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAGitHub%E8%B4%A6%E6%88%B7/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAGitHub%E8%B4%A6%E6%88%B7/</guid>
+        
+        <category>GitHub</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
