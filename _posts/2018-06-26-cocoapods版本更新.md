@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      如何使用多个GitHub账户
-subtitle:   多账号 GitHub SSH
-date:       2018-06-22
+title:      cocoapods版本更新
+subtitle:   cocoapods更新
+date:       2018-06-26
 author:     Pancratius
-header-img: img/post-bg-cook.jpg
+header-img: img/home-bg-art.jpg
 catalog: true
 tags:
     - cocoapods
