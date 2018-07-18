@@ -183,6 +183,97 @@
             ">
     			
 <div class="post-preview">
+    <a href="/2018/07/11/git%E6%9C%AC%E5%9C%B0%E6%8B%89%E5%8F%96-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E5%85%8D%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81/">
+        <h2 class="post-title">
+            git本地拉取、提交代码免输入用户名和密码
+        </h2>
+        
+        <h3 class="post-subtitle">
+            git本地拉取、提交代码免输入用户名和密码
+        </h3>
+        
+        <div class="post-content-preview">
+            解决 git pull 或者 git push 每次都要输入用户名和密码问题
+
+方式一、命令行
+git config –global credential.helper store
+
+方式二、修改配置文件.config
+在文件最后加上系列内容即可
+[credential]
+	helper = store
+
+
+然后 git pull /git push 输入一次用户名和密码即可，这个信息会被记...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Pancratius on July 11, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/06/26/SpringMVC%E4%B8%AD%E7%9B%B8%E5%85%B3%E6%B3%A8%E8%A7%A3%E4%BB%8B%E7%BB%8D/">
+        <h2 class="post-title">
+            SpringMVC中相关注解介绍
+        </h2>
+        
+        <h3 class="post-subtitle">
+            SpringMVC中相关注解介绍
+        </h3>
+        
+        <div class="post-content-preview">
+            @RequestMapping
+@RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。
+
+@GetMapping
+@GetMapping是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写。该注解将HTTP Get 映射到 特定的处理方法上。
+
+...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Pancratius on June 26, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/06/26/cocoapods%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0/">
+        <h2 class="post-title">
+            cocoapods版本更新
+        </h2>
+        
+        <h3 class="post-subtitle">
+            cocoapods更新
+        </h3>
+        
+        <div class="post-content-preview">
+            1.先切换gem源
+gem sources --remove https://rubygems.org/
+gem source -a https://gems.ruby-china.org
+
+
+2.查看是否切换成功
+gem source -l
+
+
+3.查看是否成功
+*** CURRENT SOURCES ***
+https://gems.ruby-china.org
+
+
+4.切换成功后，接下...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Pancratius on June 26, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
     <a href="/2018/06/22/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AAGitHub%E8%B4%A6%E6%88%B7/">
         <h2 class="post-title">
             如何使用多个GitHub账户
@@ -230,6 +321,24 @@ ssh-keygen -t rsa -C "your-email-address"
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
+                        
+                            
+                        
+                            
+                                <a href="/tags/#cocoapods" title="cocoapods" rel="2">
+                                    cocoapods
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#更新" title="更新" rel="2">
+                                    更新
+                                </a>
+                            
+                        
+                            
+                        
+                            
                         
                             
                         

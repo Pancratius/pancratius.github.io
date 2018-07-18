@@ -5,9 +5,172 @@
     <description>Every failure is leading towards success.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 25 Jun 2018 11:49:11 +0800</pubDate>
-    <lastBuildDate>Mon, 25 Jun 2018 11:49:11 +0800</lastBuildDate>
+    <pubDate>Tue, 17 Jul 2018 16:50:47 +0800</pubDate>
+    <lastBuildDate>Tue, 17 Jul 2018 16:50:47 +0800</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>git本地拉取、提交代码免输入用户名和密码</title>
+        <description>&lt;p&gt;解决 git pull 或者 git push 每次都要输入用户名和密码问题&lt;/p&gt;
+
+&lt;p&gt;方式一、命令行
+git config –global credential.helper store&lt;/p&gt;
+
+&lt;p&gt;方式二、修改配置文件.config
+在文件最后加上系列内容即可&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[credential]
+	helper = store
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;然后 &lt;em&gt;git pull /git push&lt;/em&gt; 输入一次用户名和密码即可，这个信息会被记录下来。 这一步会在用户目录下生成文件.git-credential记录用户名密码的信息。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 11 Jul 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/07/11/git%E6%9C%AC%E5%9C%B0%E6%8B%89%E5%8F%96-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E5%85%8D%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/07/11/git%E6%9C%AC%E5%9C%B0%E6%8B%89%E5%8F%96-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E5%85%8D%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81/</guid>
+        
+        <category>git</category>
+        
+        <category>credential</category>
+        
+        <category>用户名、密码</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>SpringMVC中相关注解介绍</title>
+        <description>&lt;p&gt;&lt;strong&gt;@RequestMapping&lt;/strong&gt;
+@RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@GetMapping&lt;/strong&gt;
+@GetMapping是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写。该注解将HTTP Get 映射到 特定的处理方法上。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@PreAuthorize/@PostAuthorize&lt;/strong&gt;
+@PreAuthorize/@PostAuthorize 注解更适合方法级的安全,也支持Spring 表达式语言，提供了基于表达式的访问控制。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@Controller&lt;/strong&gt;
+@Controller 用来响应页面，@Controller必须配合模版来使用。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@RestController&lt;/strong&gt;
+@RestController是@ResponseBody和@Controller的组合注解。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@Entity&lt;/strong&gt;
+@Entity注释指名这是一个实体Bean。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@Table&lt;/strong&gt;
+@Table注释指定了Entity所要映射带数据库表,如果缺省@Table注释，系统默认采用类名作为映射表的表名。实体Bean的每个实例代表数据表中的一行数据，行中的一列对应实例中的一个属性。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@Column&lt;/strong&gt;
+@Column注释定义了将成员属性映射到关系表中的哪一列和该列的结构信息，属性如下：&lt;/p&gt;
+
+&lt;p&gt;1）name：映射的列名。如：映射tbl_user表的name列，可以在name属性的上面或getName方法上面加入；&lt;/p&gt;
+
+&lt;p&gt;2）unique：是否唯一；&lt;/p&gt;
+
+&lt;p&gt;3）nullable：是否允许为空；&lt;/p&gt;
+
+&lt;p&gt;4）length：对于字符型列，length属性指定列的最大字符长度；&lt;/p&gt;
+
+&lt;p&gt;5）insertable：是否允许插入；&lt;/p&gt;
+
+&lt;p&gt;6）updatetable：是否允许更新；&lt;/p&gt;
+
+&lt;p&gt;7）columnDefinition：定义建表时创建此列的DDL；&lt;/p&gt;
+
+&lt;p&gt;8）secondaryTable：从表名。如果此列不建在主表上（默认是主表），该属性定义该列所在从表的名字。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@Id&lt;/strong&gt;
+@Id注释指定表的主键&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@GeneratedValue&lt;/strong&gt;
+@GeneratedValue注释定义了标识字段生成方式。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@Temporal&lt;/strong&gt;
+@Temporal注释用来指定java.util.Date或java.util.Calender属性与数据库类型date、time或timestamp中的那一种类型进行映射。
+@Temporal(value=TemporalType.TIME)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@Transient&lt;/strong&gt;
+如果不想让一些成员属性映射成数据库字段，可以使用@Transient注释进行标注。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@OneToOne&lt;/strong&gt;
+一对一关系，需要在关系维护端的@OneToOne注释中定义mappedBy属性。在关系被维护端建立外键列指向关系维护的主键列。
+@OneToOne注释指明User与Card为一对一关系，@OneToOne注释有5个属性：targetEntity、cascade、fetch、optional和mappedBy。&lt;/p&gt;
+
+&lt;p&gt;1）targetEntity：Class类型的属性&lt;/p&gt;
+
+&lt;p&gt;2）mappedBy：String类型的属性。定义类之间的双向关联。如果类之间是单向关系，不需要提供定义，如果类和类之间形成双向关系。就需要使用这个属性进行定义，否则可能引起数据一致性的问题。&lt;/p&gt;
+
+&lt;p&gt;3）cascade：CascadeType类型。该属性定义类和类之间的级联关系。定义级联关系将被容器视为当前类对象及其关联类对象采取相同的操作，而且这种关系是递归的。cascade的值只能从CascadeType.PERSIST(级联新建)、CascadeType.REMOVE(级联删除)、CascadeType.REFRESH(级联刷新)、Cascade.MERGE(级联更新)中选择一个或多个。还有一个选择是使用CascadeType.ALL，表示选择全部四项。&lt;/p&gt;
+
+&lt;p&gt;4）fetch：FetchType类型的属性。可选择项包括：FetchType.EAGER和FetchType.LAZY。前者表示关系类在主体类加载的时候同时加载，后者表示关系类在被访问时才加载。默认值是FetchType.LAZY。&lt;/p&gt;
+
+&lt;p&gt;5）optional：表示被维护对象是否需要存在。如果为真，说明card属性可以null，也就是允许没有身份证，未成年人就是没有身份证。&lt;/p&gt;
+
+&lt;p&gt;@OneToOne注释指明Card与User为一对一关系，Card是关系被维护端，optional=false设置user属性值不能为空，也就是身份证必须有对应的主人。@JoinColumn(name=”user_id” referencedColumnName=”id” unique=”true”)指明tbl_card表的user_id列作为外键与tbl_user表的person_id列进行关联，unique=true指明user_id列的值不可重复。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@OneToMany&lt;/strong&gt;
+&lt;strong&gt;@ManyToOne&lt;/strong&gt;
+&lt;strong&gt;@ManyToMany&lt;/strong&gt;
+an*
+*&lt;/p&gt;
+</description>
+        <pubDate>Tue, 26 Jun 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/06/26/SpringMVC%E4%B8%AD%E7%9B%B8%E5%85%B3%E6%B3%A8%E8%A7%A3%E4%BB%8B%E7%BB%8D/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/06/26/SpringMVC%E4%B8%AD%E7%9B%B8%E5%85%B3%E6%B3%A8%E8%A7%A3%E4%BB%8B%E7%BB%8D/</guid>
+        
+        <category>cocoapods</category>
+        
+        <category>更新</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>cocoapods版本更新</title>
+        <description>&lt;p&gt;1.先切换gem源&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem sources --remove https://rubygems.org/
+gem source -a https://gems.ruby-china.org
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;2.查看是否切换成功&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem source -l
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;3.查看是否成功&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*** CURRENT SOURCES ***
+https://gems.ruby-china.org
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;4.切换成功后，接下来就可以开始升级了cocoapods了&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo gem install cocoapods
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;5.查看是否升级成功&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;6.升级成功后的版本号&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.5.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;7.设置pod仓库&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod setup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;8.setup成功&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Setup completed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 26 Jun 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/06/26/cocoapods%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/06/26/cocoapods%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0/</guid>
+        
+        <category>cocoapods</category>
+        
+        <category>更新</category>
+        
+        
+      </item>
     
       <item>
         <title>如何使用多个GitHub账户</title>
