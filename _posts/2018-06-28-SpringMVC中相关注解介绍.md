@@ -83,6 +83,8 @@ tags:
 **@OneToMany**
 **@ManyToOne**
 **@ManyToMany**
+@Embedded和@Embeddable 将未入表对象属性引入到其他类建立的表中
+[]()
 
 
 ####lombok 相关注解
