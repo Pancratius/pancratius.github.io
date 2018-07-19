@@ -1,9 +1,9 @@
 # Site settings
 title: Pancratius Blog
 SEOTitle: Pancras的博客 | Pancratius
-header-img: img/post-bg-desk.jpg
+header-img: img/post-bg-unix-linux.jpg
 email: coder.zpf@gmail.com
-description: "Every failure is leading towards success."
+description: "快速了解，实践练习，深入理解，全能掌握"
 keyword: "first write blog on github"
 url: "http://pancratius.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -18,12 +18,9 @@ sidebar-avatar: /img/got-winter-marino.png      # use absolute URL, seeing it's 
 
 # SNS settings
 RSS: false
-# weibo_username:     qiubaiying
-#zhihu_username:     qiubaiying
+# weibo_username:     xxxx
+#zhihu_username:     xxxx
 github_username:    Pancratius
-#facebook_username:  baiying.qiu.7
-#jianshu_username:   e71990ada2fd
-#twitter_username:   qiubaiying
 
 
 
@@ -57,16 +54,16 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-disqus_username: captainsirzero
+# disqus_username: captainsirzero
 
 # Gitalk
 gitalk:
-  enable: false    #是否开启Gitalk评论
-  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: qiubaiying.github.io    #仓库名称
-  owner: qiubaiying    #github用户名
-  admin: qiubaiying
+  enable: true    #是否开启Gitalk评论
+  clientID: ab1a91fe0cba17fc87bc                            #生成的clientID
+  clientSecret: 177a0a448ccb5406c88bc189192c6c09ea55b793    #生成的clientSecret
+  repo: pancratius.github.io    #仓库名称
+  owner: Pancratius    #github用户名
+  admin: Pancratius
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
