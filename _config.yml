@@ -58,7 +58,7 @@ kramdown:
 
 # Gitalk
 gitalk:
-  enable: false    #是否开启Gitalk评论
+  enable: true    #是否开启Gitalk评论
   clientID: ab1a91fe0cba17fc87bc                            #生成的clientID
   clientSecret: 177a0a448ccb5406c88bc189192c6c09ea55b793    #生成的clientSecret
   repo: pancratius.github.io    #仓库名称
