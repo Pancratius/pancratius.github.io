@@ -2,7 +2,7 @@
 layout:     post
 title:      Hibenate中@Embedded和@Embeddable使用
 subtitle:   @Embedded、@Embeddable
-date:       2018-07-18
+date:       2018-07-19
 author:     Pancratius
 header-img: img/home-bg-art.jpg
 catalog: true
